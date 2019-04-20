@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import Table from './components/Table.jsx';
 
 const DEFAULT_QUERY = 'redux';
 
@@ -25,12 +26,18 @@ class App extends Component {
   setSearchTopStories(result) {
     this.setState({ result });
   }
+
   componentDidMount() {
     const { searchTerm } = this.state;
     fetch(`${PATH_BASE}${PATH_SEARCH}?${PARAM_SEARCH}${searchTerm}`)
       .then(response => response.json())
       .then(result => this.setSearchTopStories(result))
       .catch(error => error);
+  }
+
+  onDismiss(id) {
+    // const isNotId = item => item
+    console.log(id);
   }
 
   render() {
@@ -43,7 +50,12 @@ class App extends Component {
     return (
       <div className="App page">
         <h1>Hacker News</h1>
-        <a href={result.hits[1].url}>Story 1</a>
+        {/* <a href={result.hits[1].url}>Story 1</a> */}
+        <Table
+          list={result.hits}
+          pattern={searchTerm}
+          onDismiss={this.onDismiss}
+        />
       </div>
     );
   }
