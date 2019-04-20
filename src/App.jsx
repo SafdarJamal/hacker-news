@@ -21,6 +21,7 @@ class App extends Component {
     };
 
     this.setSearchTopStories = this.setSearchTopStories.bind(this);
+    this.onDismiss = this.onDismiss.bind(this);
   }
 
   setSearchTopStories(result) {
@@ -36,8 +37,13 @@ class App extends Component {
   }
 
   onDismiss(id) {
-    // const isNotId = item => item
-    console.log(id);
+    // console.log(id);
+    const isNotId = item => item.objectID !== id;
+    const updatedHits = this.state.result.hits.filter(isNotId);
+    console.log(updatedHits);
+    this.setState({
+      result: Object.assign({}, this.state.result, { hits: updatedHits })
+    });
   }
 
   render() {
