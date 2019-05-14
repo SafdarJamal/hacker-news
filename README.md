@@ -2,9 +2,7 @@
 
 Hacker News App built with React
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Building
+## Development
 
 Install dependencies:
 
@@ -19,4 +17,6 @@ npm install
 - `npm test` - Start the test runner
 - `npm run eject` - If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-## MIT Licensed
+## License
+
+This App is an open source software [licensed as MIT](https://github.com/safdarjamal/hacker-news/blob/master/LICENSE).
