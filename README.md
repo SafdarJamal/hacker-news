@@ -19,4 +19,4 @@ npm install
 
 ## License
 
-This App is an open source software [licensed as MIT](https://github.com/safdarjamal/hacker-news/blob/master/LICENSE).
+This is an open source software [licensed as MIT](https://github.com/safdarjamal/hacker-news/blob/master/LICENSE).
