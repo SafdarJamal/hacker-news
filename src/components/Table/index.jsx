@@ -2,6 +2,7 @@ import React from 'react';
 
 const Table = props => {
   const { list, pattern, onDismiss } = props;
+
   return (
     <div>
       {list.map(item => (

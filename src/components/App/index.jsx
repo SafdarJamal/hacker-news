@@ -49,14 +49,18 @@ class App extends Component {
   render() {
     const { result, searchTerm } = this.state;
     console.log(result);
+
     if (!result) {
       // console.log('bingo', !result);
       return null;
     }
+
     return (
       <div className="App page">
         <h1>Hacker News</h1>
-        {/* <a href={result.hits[1].url}>Story 1</a> */}
+        {/* {result.hits.map((news, i) => (
+          <a href={news.url}>News {i + 1}</a>
+        ))} */}
         <Table
           list={result.hits}
           pattern={searchTerm}
