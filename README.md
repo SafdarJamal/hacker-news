@@ -1,6 +1,6 @@
 # Hacker News
 
-Hacker News App built with React
+Hacker News app built with React.
 
 ## Development
 
